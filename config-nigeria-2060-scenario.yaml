@@ -43,7 +43,7 @@ crs:
 
 augmented_line_connection:
   add_to_snakefile: true  # If True, includes this rule to the workflow
-  connectivity_upgrade: 2  # Min. lines connection per node, https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.connectivity.edge_augmentation.k_edge_augmentation.html#networkx.algorithms.connectivity.edge_augmentation.k_edge_augmentation
+  connectivity_upgrade: 3  # Min. lines connection per node, https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.connectivity.edge_augmentation.k_edge_augmentation.html#networkx.algorithms.connectivity.edge_augmentation.k_edge_augmentation
   new_line_type: ["HVAC", "HVDC"]  # Expanded lines can be either ["HVAC"] or ["HVDC"] or both ["HVAC", "HVDC"]
   min_expansion: 1  # [MW] New created line expands by float/int input
   min_DC_length: 600  # [km] Minimum line length of DC line
@@ -277,7 +277,7 @@ renewable:
 
 # TODO: Needs to be adjusted for Africa
 costs:
-  year: 2030
+  year: 2060
   discountrate: 0.07 # From a Lion Hirth paper, also reflects average of Noothout et al 2016
   USD2013_to_EUR2013: 0.7532 # [EUR/USD] ECB: https://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html
   marginal_cost: # EUR/MWh
